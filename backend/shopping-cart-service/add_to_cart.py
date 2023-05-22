@@ -41,10 +41,11 @@ def lambda_handler(event, context):
         }
     product_id = request_payload["productId"]
     quantity = request_payload.get("quantity", 1)
+    quantity = str(quantity)
     cart_id, _ = get_cart_id(event["headers"])
 
     logger.info(f"Add the product : ${product_id} to the cart - ${cart_id}")
-    logger.info(f"Requested quantity : {abs(quantity)}")
+    logger.info(f"Requested quantity : {quantity)}")
 
     # Because this method can be called anonymously, we need to check there's a logged in user
     user_sub = None
