@@ -9,6 +9,23 @@ tracer = Tracer()
 
 with open('product_list.json', 'r') as product_list:
     product_list = json.load(product_list)
+    new_instance =  {
+        "category": null,
+        "createdDate": null,
+        "description": null,
+        "modifiedDate": null,
+        "name": null,
+        "package": {
+            null
+        },
+        "pictures": [
+            null
+        ],
+        "price": null,
+        "productId": null,
+        "tags": []
+    }
+    product_list.append(new_instance)
 
 HEADERS = {
     "Access-Control-Allow-Origin": os.environ.get("ALLOWED_ORIGIN"),
