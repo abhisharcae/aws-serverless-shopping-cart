@@ -43,7 +43,7 @@ def lambda_handler(event, context):
     # retrieve the product_id that was specified in the url
     product_id = event["pathParameters"]["product_id"]
     logger.info(f"Update quantity of items in cart for product#{product_id}")
-    quantity = int(request_payload["quantity"])
+    quantity = str(request_payload["quantity"])
     cart_id, _ = get_cart_id(event["headers"])
 
     # Because this method can be called anonymously, we need to check if there's a logged in user
