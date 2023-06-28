@@ -5,7 +5,7 @@ serverless technologies on AWS. The backend is built as a REST API interface, ma
 
 To assist in demonstrating the functionality, a bare bones mock "products" service has also been included. Since the 
 authentication parts are likely to be shared between components, there is a separate template for it. The front-end 
-doesn't make any real payment integration at this time.
+doesn't make any real payment integration at this time .
 
 ## Architecture & Design
 
